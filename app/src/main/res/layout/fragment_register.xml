@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    05/01/2023
+    10119904
+    Waraney Willem Palandeng Kalangie
+    IF10K
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout.RegisterViewBindingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/normal_guideline_start_point" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/normal_guideline_end_point" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_header_back">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_normal_100"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/txt_field_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:autofillHints="username"
+            android:backgroundTint="@color/separator"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:paddingBottom="@dimen/space_normal_125"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <EditText
+            android:id="@+id/txt_field_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:autofillHints="emailAddress"
+            android:backgroundTint="@color/separator"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="@dimen/space_normal_125"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_username" />
+
+        <EditText
+            android:id="@+id/txt_field_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:autofillHints="phone"
+            android:backgroundTint="@color/separator"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:paddingBottom="@dimen/space_normal_125"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_email" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_phone_number">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_normal_100"
+                android:layout_weight="1"
+                android:checked="true"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/male"
+                android:textColor="@color/separator" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_normal_100"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/female"
+                android:textColor="@color/separator" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_blood_type"
+            app:endIconDrawable="@drawable/ic_arrow_dropdown"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="@dimen/space_mini_40"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:layout_marginEnd="@dimen/space_normal_100"
+            android:background="@android:color/transparent"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toStartOf="@id/txt_layout_blood_rhesus"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_gender">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_blood_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/blood_type"
+                android:paddingStart="2dp"
+                android:paddingTop="@dimen/space_mini_100"
+                android:paddingEnd="0dp"
+                android:textColor="@color/separator" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_blood_rhesus"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="@dimen/space_normal_100"
+            android:layout_marginTop="@dimen/space_mini_20"
+            app:endIconDrawable="@drawable/ic_arrow_dropdown"
+            android:background="@android:color/transparent"
+            app:errorIconDrawable="@null"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/txt_layout_blood_type"
+            app:layout_constraintTop_toBottomOf="@id/radio_group_gender">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_blood_rhesus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/rhesus"
+                android:paddingStart="2dp"
+                android:paddingTop="@dimen/space_mini_100"
+                android:paddingEnd="0dp"
+                android:textColor="@color/separator" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/txt_field_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:autofillHints="password"
+            android:backgroundTint="@color/separator"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingBottom="@dimen/space_normal_125"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_layout_blood_type" />
+
+        <EditText
+            android:id="@+id/txt_field_retype_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:autofillHints="password"
+            android:backgroundTint="@color/separator"
+            android:hint="@string/retype_password"
+            android:inputType="textPassword"
+            android:paddingBottom="@dimen/space_normal_125"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_password" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_account_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_retype_password">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_normal_100"
+                android:layout_weight="1"
+                android:checked="true"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/personal"
+                android:textColor="@color/separator" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_normal_100"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/organization"
+                android:textColor="@color/separator" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_job"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="@dimen/space_mini_40"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:background="@android:color/transparent"
+            app:errorIconDrawable="@null"
+            app:endIconDrawable="@drawable/ic_arrow_dropdown"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/radio_group_account_type">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_job"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/job"
+                android:paddingStart="2dp"
+                android:paddingTop="@dimen/space_mini_100"
+                android:paddingEnd="0dp"
+                android:textColor="@color/separator" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/txt_field_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:autofillHints="postalAddress"
+            android:backgroundTint="@color/separator"
+            android:hint="@string/home_address"
+            android:inputType="textPostalAddress"
+            android:paddingBottom="@dimen/space_normal_125"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_layout_job" />
+
+        <EditText
+            android:id="@+id/txt_field_default_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:autofillHints="postalAddress"
+            android:backgroundTint="@color/separator"
+            android:drawableEnd="@drawable/ic_blood_needed_location"
+            android:hint="@string/default_location"
+            android:inputType="textPostalAddress"
+            android:paddingBottom="@dimen/space_normal_125"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_address" />
+
+        <CheckBox
+            android:button="@drawable/selector_check_box_term_and_condition"
+            android:id="@+id/checkbox_term_condition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_120"
+            android:hint="@string/agree_with_terms_and_conditions"
+            android:paddingStart="@dimen/space_normal_150"
+            android:paddingEnd="0dp"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_default_location" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_120"
+            android:layout_marginBottom="@dimen/space_normal_100"
+            android:backgroundTint="@color/white"
+            android:minHeight="@dimen/space_large_200"
+            android:stateListAnimator="@null"
+            android:text="@string/register"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_term_condition"
+            app:strokeColor="@color/light_blue"
+            app:strokeWidth="2dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

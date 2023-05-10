@@ -1,0 +1,75 @@
+<!--
+    05/01/2023
+    10119904
+    Waraney Willem Palandeng Kalangie
+    IF10K
+-->
+<resources>
+    <string name="app_name">10119904Latihan2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="connect_with_facebook">Connect With Facebook</string>
+    <string name="does_not_have_account_register">doesn\'t have account? Register</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="blood_type">Blood Type</string>
+    <string name="rhesus">Rhesus</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="personal">Personal</string>
+    <string name="organization">Organization</string>
+    <string name="job">Job</string>
+    <string name="home_address">Home Address</string>
+    <string name="agree_with_terms_and_conditions">Agree with Terms and Conditions</string>
+    <string name="almost_there">ALMOST THERE</string>
+    <string name="thank_you_for_registering_with_us_one_more_n_step_you_need_to_check_your_email_n_to_active_your_account">Thank you for registering with Us. One more \n step, you need to check your email \n to active your account</string>
+    <string name="verify">Verify</string>
+    <string name="verify_your_account">Verify your Account</string>
+    <string name="we_have_send_verification_code_to_your_email">We have send verification code to your email</string>
+    <string name="enter_verification_code_here">enter verification code here...</string>
+    <string name="does_not_get_the_code_resend">doesn\'t get the code? Resend</string>
+    <string name="send">Send</string>
+    <string name="resend">Resend</string>
+    <string name="waraney_kalangie">Waraney Kalangie</string>
+    <string name="blood_type_o">Blood type : O</string>
+    <string name="_75">75</string>
+    <string name="_100">100</string>
+    <string name="_330">330</string>
+    <string name="blood_give">BLOOD GIVE</string>
+    <string name="blood_received">BLOOD RECEIVED</string>
+    <string name="thanks">THANKS</string>
+    <string name="search_donor">Search Donor</string>
+    <string name="search_donor_near_you">Search donor near you</string>
+    <string name="blood_needed">Blood Needed</string>
+    <string name="_4_users_need_blood">4 Users need blood</string>
+    <string name="donor_history">Donor History</string>
+    <string name="message">Message</string>
+    <string name="_5_new_messages">5 New Messages</string>
+    <string name="default_location">Default Location</string>
+
+    <string-array name="blood_types">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="blood_rhesus">
+        <item>+</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="jobs">
+        <item>Programmer</item>
+        <item>Designer</item>
+        <item>Architect</item>
+        <item>Doctor</item>
+        <item>Others</item>
+    </string-array>
+</resources>

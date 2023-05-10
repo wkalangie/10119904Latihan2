@@ -1,0 +1,11 @@
+<!--
+    05/01/2023
+    10119904
+    Waraney Willem Palandeng Kalangie
+    IF10K
+-->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_mini_120"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

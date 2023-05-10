@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/application_nav_graph"
+    app:startDestination="@id/loginViewBindingFragment">
+    <fragment
+        android:id="@+id/loginViewBindingFragment"
+        android:name="com.waraneykalangie.a10119904latihan2.layout.LoginViewBindingFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginViewBindingFragment_to_registerViewBindingFragment"
+            app:destination="@id/registerViewBindingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/almostThereViewBindingFragment"
+        android:name="com.waraneykalangie.a10119904latihan2.layout.AlmostThereViewBindingFragment"
+        android:label="fragment_almost_there"
+        tools:layout="@layout/fragment_almost_there" >
+        <action
+            android:id="@+id/action_almostThereViewBindingFragment_to_verifyViewBindingFragment"
+            app:destination="@id/verifyViewBindingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerViewBindingFragment"
+        android:name="com.waraneykalangie.a10119904latihan2.layout.RegisterViewBindingFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerViewBindingFragment_to_almostThereViewBindingFragment"
+            app:destination="@id/almostThereViewBindingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyViewBindingFragment"
+        android:name="com.waraneykalangie.a10119904latihan2.layout.VerifyViewBindingFragment"
+        android:label="fragment_verify"
+        tools:layout="@layout/fragment_verify" >
+        <action
+            android:id="@+id/action_verifyViewBindingFragment_to_homeViewBindingFragment"
+            app:destination="@id/homeViewBindingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeViewBindingFragment"
+        android:name="com.waraneykalangie.a10119904latihan2.layout.HomeViewBindingFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

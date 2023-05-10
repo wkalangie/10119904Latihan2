@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".layout.AlmostThereViewBindingFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@fraction/normal_guideline_start_point" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@fraction/normal_guideline_end_point" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_tittle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/almost_there"
+        android:textAlignment="center"
+        android:textSize="@dimen/txt_large_100"
+        android:layout_marginBottom="@dimen/space_mini_120"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/txt_view_desc"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/thank_you_for_registering_with_us_one_more_n_step_you_need_to_check_your_email_n_to_active_your_account"
+        android:textAlignment="center"
+        android:textSize="@dimen/txt_mini_140"
+        android:layout_marginBottom="@dimen/space_large_218"
+        android:textColor="@color/shadow_header"
+        app:layout_constraintBottom_toTopOf="@id/btn_verify"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/txt_view_tittle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_verify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_normal_100"
+        android:stateListAnimator="@null"
+        android:text="@string/verify"
+        android:textSize="@dimen/txt_normal_100"
+        android:minHeight="@dimen/space_large_200"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/txt_view_desc"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

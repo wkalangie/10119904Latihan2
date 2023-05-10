@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    05/01/2023
+    10119904
+    Waraney Willem Palandeng Kalangie
+    IF10K
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".layout.VerifyViewBindingFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@fraction/normal_guideline_start_point" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@fraction/normal_guideline_end_point" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_tittle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_mini_100"
+        android:text="@string/verify_your_account"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_large_100"
+        app:layout_constraintBottom_toBottomOf="@id/txt_view_desc"
+        app:layout_constraintBottom_toTopOf="@id/txt_view_desc"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_desc"
+        android:layout_width="0dp"
+        android:textSize="@dimen/txt_mini_140"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_large_150"
+        android:text="@string/we_have_send_verification_code_to_your_email"
+        android:textAlignment="center"
+        android:textColor="@color/shadow_header"
+        app:layout_constraintBottom_toTopOf="@id/txt_layout_verification"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/txt_view_tittle" />
+
+    <EditText
+        android:id="@+id/txt_layout_verification"
+        android:layout_width="0dp"
+        android:autofillHints="creditCardSecurityCode"
+        android:inputType="text"
+        android:layout_marginBottom="@dimen/txt_normal_100"
+        android:layout_height="wrap_content"
+        android:textColor="@color/shadow_header"
+        android:textColorHint="@color/shadow_header"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        android:paddingBottom="@dimen/space_normal_125"
+        android:hint="@string/enter_verification_code_here"
+        app:layout_constraintBottom_toTopOf="@id/btn_send"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/txt_view_desc"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_mini_140"
+        android:stateListAnimator="@null"
+        android:text="@string/send"
+        android:textSize="@dimen/txt_normal_100"
+        android:minHeight="@dimen/space_large_200"
+        app:layout_constraintBottom_toTopOf="@id/txt_view_resend_verification_code"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/txt_layout_verification"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_resend_verification_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorLink="@color/white"
+        android:text="@string/does_not_get_the_code_resend"
+        android:textAlignment="center"
+        android:textColor="@color/shadow_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/btn_send" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
